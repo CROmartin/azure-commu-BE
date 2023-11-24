@@ -7,7 +7,13 @@ import cors from "cors";
 
 const app = express();
 app.use(express.json());
-app.use(cors()); // Enable CORS for all routes and origins
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // File path for the JSON database
 const dbFilePath = "db.json";
