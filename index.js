@@ -3,9 +3,11 @@ import express from "express";
 import { CommunicationIdentityClient } from "@azure/communication-identity";
 import jsonfile from "jsonfile";
 import jwt from "jsonwebtoken";
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
+app.use(cors()); // Enable CORS for all routes and origins
 
 // File path for the JSON database
 const dbFilePath = "db.json";
