@@ -196,7 +196,7 @@ app.get("/redirect", async (req, res) => {
       let dbData = await readDb();
 
       // Add the new accessToken to the database
-      dbData.teamsUsers.push({ userObjectId, ...accessToken });
+      dbData.teamsUsers.unshift({ userObjectId, ...accessToken });
 
       // Write the updated data back to the database
       await writeDb(dbData);
