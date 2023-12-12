@@ -127,7 +127,7 @@ app.get("/teams-token", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-const REDIRECT_URI = `http://localhost:${PORT}/redirect`;
+const REDIRECT_URI = `https://d2kcfez0p9qsv1.cloudfront.net/redirect`;
 const clientId = "71ec184c-069c-43e1-a7d0-8994917f98ab";
 const tenantId = "1bfd6abf-6ad6-4190-b64a-626e85072fd7";
 
